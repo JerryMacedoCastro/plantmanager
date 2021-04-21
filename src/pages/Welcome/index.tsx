@@ -11,7 +11,7 @@ import { Feather } from "@expo/vector-icons";
 import wateringImg from "../../assets/watering.png";
 import { styles } from "./styles";
 
-const Welcome = () => {
+const index = () => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.wrapper}>
@@ -37,4 +37,4 @@ const Welcome = () => {
   );
 };
 
-export default Welcome;
+export default index;
