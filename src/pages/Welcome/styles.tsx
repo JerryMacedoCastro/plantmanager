@@ -1,24 +1,31 @@
 import colors from "../../styles/colors";
+import fonts from "../../styles/fonts";
 import { StyleSheet, Dimensions } from "react-native";
 
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
+  },
+  wrapper: {
+    flex: 1,
     alignItems: "center",
     justifyContent: "space-around",
+    paddingHorizontal: 20,
   },
   title: {
-    fontSize: 32,
-    fontWeight: "bold",
+    fontSize: 28,
     textAlign: "center",
     color: colors.heading,
     marginTop: 48,
+    fontFamily: fonts.heading,
+    lineHeight: 34,
   },
   subtitle: {
     textAlign: "center",
     fontSize: 18,
     paddingHorizontal: 20,
     color: colors.heading,
+    fontFamily: fonts.text,
   },
   image: {
     width: Dimensions.get("window").width * 0.7,
@@ -33,7 +40,7 @@ export const styles = StyleSheet.create({
     height: 56,
     width: 56,
   },
-  buttonText: {
+  buttonIcon: {
     color: colors.white,
     fontSize: 24,
   },
