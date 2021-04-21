@@ -13,7 +13,7 @@ const index = () => {
           Agora vamos começar a cuidar das suas plantas com muito cuidado!
         </Text>
         <View style={styles.footer}>
-          <Button title="Iniciar" />
+          <Button title="Começar" />
         </View>
       </View>
     </SafeAreaView>

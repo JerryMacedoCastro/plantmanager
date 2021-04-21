@@ -1,3 +1,4 @@
+import { useNavigation } from "@react-navigation/native";
 import React, { useState } from "react";
 import {
   KeyboardAvoidingView,
@@ -17,6 +18,8 @@ const index = () => {
   const [isFilled, setIsFilled] = useState(false);
   const [name, setName] = useState<string>();
 
+  const { navigate } = useNavigation();
+
   const handleInputBlur = () => {
     setIsFocused(false);
     setIsFilled(!!name);
@@ -27,6 +30,10 @@ const index = () => {
   const handleInputChange = (value: string) => {
     setIsFilled(!!value);
     setName(value);
+  };
+
+  const handleConfirm = () => {
+    navigate("Confirmation");
   };
 
   return (
@@ -52,7 +59,7 @@ const index = () => {
               />
             </View>
             <View style={styles.footer}>
-              <Button title="Confirmar" />
+              <Button title="Confirmar" onPress={handleConfirm} />
             </View>
           </View>
         </View>
