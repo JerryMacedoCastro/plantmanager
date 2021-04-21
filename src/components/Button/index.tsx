@@ -7,8 +7,8 @@ interface ButtonProps extends TouchableOpacityProps {
 
 const Button = ({ title, ...rest }: ButtonProps) => {
   return (
-    <TouchableOpacity style={styles.button} activeOpacity={0.5} {...rest}>
-      <Text style={styles.buttonText}>{title}</Text>
+    <TouchableOpacity style={styles.container} activeOpacity={0.5} {...rest}>
+      <Text style={styles.text}>{title}</Text>
     </TouchableOpacity>
   );
 };

@@ -13,6 +13,10 @@ export const styles = StyleSheet.create({
     flex: 1,
     width: "100%",
   },
+  header: {
+    alignItems: "center",
+    width: "100%",
+  },
   form: {
     flex: 1,
     justifyContent: "center",
@@ -33,8 +37,16 @@ export const styles = StyleSheet.create({
     textAlign: "center",
   },
   title: {
-    fontFamily: fonts.heading,
     fontSize: 24,
+    lineHeight: 32,
+    textAlign: "center",
+    fontFamily: fonts.heading,
     color: colors.green_dark,
+    marginTop: 20,
+  },
+  footer: {
+    marginTop: 40,
+    width: "100%",
+    paddingHorizontal: 20,
   },
 });
