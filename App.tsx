@@ -1,15 +1,11 @@
 // eslint-disable-next-line no-use-before-define
 import React from "react";
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+
+import { StyleSheet } from "react-native";
+import Welcome from "./src/pages/Welcome";
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Hello darkness my old friend</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+  return <Welcome />;
 }
 
 const styles = StyleSheet.create({
