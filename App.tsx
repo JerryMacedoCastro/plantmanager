@@ -1,22 +1,18 @@
-// eslint-disable-next-line no-use-before-define
 import React from "react";
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+
+import {
+  useFonts,
+  // eslint-disable-next-line camelcase
+  Jost_400Regular,
+  // eslint-disable-next-line camelcase
+  Jost_600SemiBold,
+} from "@expo-google-fonts/jost";
+import AppLoading from "expo-app-loading";
+import Routes from "./src/routes";
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Hello darkness my old friend</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+  const [fontsLoaded] = useFonts({ Jost_400Regular, Jost_600SemiBold });
+  if (!fontsLoaded) return <AppLoading />;
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
+  return <Routes />;
+}
